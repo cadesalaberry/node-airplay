@@ -47,10 +47,10 @@ resulting in [a fork](https://github.com/benvanik/node_mdns).
 If you're running node on FreeBSD (or maybe Linux) you may get errors during
 install about a missing dns_sd.h file. If so, install the Apple mDNS SDK:
 
-    wget http://www.opensource.apple.com/tarballs/mDNSResponder/mDNSResponder-522.1.11.tar.gz
-    tar zxvf mDNSResponder-522.11.tar.gz
-    cd mDNSResponder-333.10/mDNSPosix/
-    sudo gmake os=freebsd install
+    wget -qO- http://www.opensource.apple.com/tarballs/mDNSResponder/mDNSResponder-561.1.1.tar.gz | tar xvz
+    cd mDNSResponder-*
+    cd mDNSPosix/
+    sudo gmake os=linux install
 
 ## API
 
